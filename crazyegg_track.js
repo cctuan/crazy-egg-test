@@ -843,6 +843,7 @@ CE2.Tracker.prototype = {
         }
     },
     send: function(e, t, n) {
+      console.log(JSON.stringify(t.props))
         var i, r, o, s = this.liveSessions, a = t && CE2.base64("" + t);
         if ("v" != e && this.id && (o = document.createElement("img"),
         o.src = this.url(e, a, n)),
