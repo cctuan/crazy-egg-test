@@ -55,6 +55,11 @@ CE2.sameSessions = function(t, e) {
 }
 ,
 CE2.startTracking = function(t, e) {
+    if (t)
+        if (CE2.sampleVisit(t))
+            CE2.testID = t.id,
+            CE2.testVersion = t.v || 1;
+    return
     var n, r;
     if (t)
         if (CE2.sampleVisit(t))
